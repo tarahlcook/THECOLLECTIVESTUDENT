@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Collective Student — Elite Athlete Homeschool Academy | Arizona</title>
+<meta name="description" content="The Collective Student is a homeschool academy in Arizona for elite-level athletes — academic rigor through Acellus Power Homeschool, plus leadership, financial literacy, and mental-performance development. In affiliation with Prodos Futbol Academy." />
+<meta name="theme-color" content="#1A1714" />
+<link rel="canonical" href="https://thecollectiveave.com/" />
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="The Collective Student — Elite Athlete Homeschool Academy" />
+<meta property="og:description" content="Homeschooling built for elite competitors: academic rigor that flexes around training, travel, and competition — plus leadership and mental-performance development." />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://thecollectiveave.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Collective Student — Elite Athlete Homeschool Academy" />
+<meta name="twitter:description" content="Academic rigor for elite athletes, balanced with training and competition. Greater Phoenix, Arizona." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Structured data for AEO / search assistants -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "The Collective Student",
+  "alternateName": "The Collective Student — Elite Athlete Academy",
+  "description": "A homeschool academy for elite-level athletes in Arizona. Academic curriculum delivered through Acellus Power Homeschool, with leadership, entrepreneurship, financial literacy, and mental-performance development.",
+  "areaServed": [
+    { "@type": "State", "name": "Arizona" },
+    { "@type": "City", "name": "Phoenix" },
+    { "@type": "City", "name": "Scottsdale" }
+  ],
+  "url": "https://thecollectiveave.com/",
+  "email": "Info@TheCollectiveAve.com",
+  "parentOrganization": { "@type": "Organization", "name": "The Collective Ave" },
+  "employee": [
+    { "@type": "Person", "name": "Tarah Cook", "jobTitle": "School Administrator & Head Educator" },
+    { "@type": "Person", "name": "Amanda Massey", "jobTitle": "School Compliance & Educational Support" }
+  ],
+  "affiliation": [
+    { "@type": "Organization", "name": "Prodos Futbol Academy" },
+    { "@type": "Organization", "name": "Acellus Power Homeschool" }
+  ]
+}
+</script>
+
+<style>
+  /* ============== TOKENS ============== */
+  :root{
+    --ink:#1A1714;
+    --cream:#F6F1E7;
+    --paper:#FBF8F1;
+    --gold:#B08D45;
+    --gold-deep:#8A6D2F;
+    --stone:#6F6353;
+    --hair:rgba(26,23,20,.16);
+    --hair-soft:rgba(26,23,20,.09);
+    --hair-light:rgba(246,241,231,.22);
+
+    --display:"Cormorant Garamond", Georgia, serif;
+    --body:"Jost", "Helvetica Neue", Arial, sans-serif;
+
+    --maxw:1180px;
+    --pad:clamp(20px, 5vw, 64px);
+    --section-y:clamp(64px, 9vw, 124px);
+  }
+
+  /* ============== RESET / BASE ============== */
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--cream);color:var(--ink);
+    font-family:var(--body);font-weight:400;
+    font-size:clamp(16px,1.05vw,17.5px);line-height:1.7;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.05;margin:0;}
+  p{margin:0 0 1.1em;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad);}
+  .section{padding-top:var(--section-y);padding-bottom:var(--section-y);}
+
+  .eyebrow{font-family:var(--body);text-transform:uppercase;letter-spacing:.26em;font-size:.72rem;font-weight:500;color:var(--gold-deep);margin:0;}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;}
+  a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px;}
+
+  /* ============== BUTTONS ============== */
+  .btn{font-family:var(--body);font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;
+    display:inline-block;text-decoration:none;cursor:pointer;border:1px solid var(--ink);
+    background:var(--ink);color:var(--cream);padding:12px 24px;transition:background .3s,color .3s;}
+  .btn:hover{background:transparent;color:var(--ink);}
+  .btn--ghost{background:transparent;color:var(--ink);}
+  .btn--ghost:hover{background:var(--ink);color:var(--cream);}
+  .btn--gold{border-color:var(--gold-deep);background:var(--gold-deep);color:var(--cream);}
+  .btn--gold:hover{background:transparent;color:var(--gold-deep);}
+  .btn--light{background:transparent;border-color:rgba(246,241,231,.5);color:var(--cream);}
+  .btn--light:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
+
+  /* ============== NAV ============== */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.82);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--hair);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;}
+  .brandmark{display:flex;align-items:baseline;gap:.5ch;text-decoration:none;}
+  .brandmark .b1{font-family:var(--body);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;font-weight:500;color:var(--stone);}
+  .brandmark .dot{color:var(--gold);}
+  .brandmark .b2{font-family:var(--display);font-size:1.3rem;font-weight:600;}
+  .nav__links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;}
+  .nav__links a{text-decoration:none;font-size:.8rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink);position:relative;padding:4px 0;}
+  .nav__links a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:var(--gold);transition:right .35s ease;}
+  .nav__links a:hover::after{right:0;}
+  .nav__toggle{display:none;background:none;border:0;cursor:pointer;padding:8px;}
+  .nav__toggle span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;}
+
+  /* ============== MASTHEAD ============== */
+  .masthead{padding-top:clamp(48px,7vw,92px);padding-bottom:clamp(56px,8vw,104px);text-align:center;}
+  .masthead__frame{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;}
+  .masthead__frame span{font-family:var(--body);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--stone);}
+  .masthead__eyebrow{margin:clamp(40px,6vw,72px) 0 8px;}
+  .masthead__title{font-size:clamp(5rem,21vw,15rem);font-weight:500;line-height:.86;letter-spacing:-.01em;}
+  .masthead__title .accent{font-style:italic;color:var(--gold-deep);}
+  .masthead__sub{font-family:var(--display);font-style:italic;font-size:clamp(1.4rem,3.4vw,2.25rem);line-height:1.3;max-width:26ch;margin:clamp(28px,4vw,40px) auto 0;color:var(--ink);}
+  .masthead__meta{margin-top:22px;font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;color:var(--stone);line-height:2;}
+  .masthead__meta b{color:var(--gold-deep);font-weight:500;}
+  .masthead__cta{margin-top:clamp(32px,4vw,42px);display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .masthead__motto{margin-top:28px;font-family:var(--display);font-style:italic;letter-spacing:.05em;font-size:1.1rem;color:var(--gold-deep);}
+
+  /* ============== MISSION (dark) ============== */
+  .mission{background:var(--ink);color:var(--cream);}
+  .mission .eyebrow{color:var(--gold);margin-bottom:10px;}
+  .mission__lead{font-family:var(--display);font-size:clamp(1.7rem,3.9vw,2.9rem);line-height:1.24;font-weight:400;max-width:22ch;margin:0;}
+  .mission__lead em{font-style:italic;color:var(--gold);}
+  .mission__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,64px);margin-top:clamp(34px,4vw,48px);}
+  .mission__grid p{color:rgba(246,241,231,.85);margin:0;}
+  .mission__grid p strong{color:var(--cream);font-weight:500;}
+
+  /* ============== SECTION HEADER ============== */
+  .shead{display:flex;flex-direction:column;gap:14px;max-width:64ch;margin-bottom:clamp(38px,5vw,62px);}
+  .shead h2{font-size:clamp(2rem,4.6vw,3.3rem);}
+  .shead p{color:var(--stone);max-width:54ch;margin:0;}
+
+  /* ============== ACADEMICS ============== */
+  .academics{background:var(--paper);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+  .academics__grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(32px,5vw,72px);align-items:center;}
+  .academics__panel{background:var(--ink);color:var(--cream);padding:clamp(30px,3.4vw,46px);position:relative;}
+  .academics__panel::before{content:"";position:absolute;top:0;left:0;width:48px;height:48px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);}
+  .academics__panel .eyebrow{color:var(--gold);margin-bottom:14px;}
+  .academics__panel h3{color:var(--cream);font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:.5em;}
+  .academics__panel p{color:rgba(246,241,231,.85);}
+  .academics__panel p:last-child{margin-bottom:0;}
+  .feat{list-style:none;margin:0;padding:0;}
+  .feat li{padding:18px 0;border-top:1px solid var(--hair);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline;}
+  .feat li:first-child{border-top:0;padding-top:0;}
+  .feat__k{font-family:var(--display);font-style:italic;color:var(--gold-deep);font-size:1.1rem;white-space:nowrap;}
+  .feat h4{margin:0 0 4px;font-family:var(--display);font-size:1.25rem;font-weight:600;}
+  .feat p{margin:0;color:var(--stone);font-size:.95rem;}
+
+  /* ============== DEVELOPMENT ============== */
+  .dev__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair-soft);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);}
+  .dev{background:var(--cream);padding:clamp(26px,2.6vw,36px) clamp(20px,2vw,30px);}
+  .dev__num{font-family:var(--display);font-style:italic;color:var(--gold);font-size:1.15rem;}
+  .dev h3{font-size:clamp(1.35rem,2.3vw,1.7rem);margin:10px 0 .4em;}
+  .dev p{color:var(--stone);margin:0;font-size:.93rem;}
+
+  /* ============== MIND (dark) ============== */
+  .mind{background:var(--ink);color:var(--cream);}
+  .mind__grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,72px);align-items:start;}
+  .mind .eyebrow{color:var(--gold);margin-bottom:14px;}
+  .mind h2{color:var(--cream);font-size:clamp(2rem,4.4vw,3.1rem);}
+  .mind h2 em{font-style:italic;color:var(--gold);}
+  .mind__body p{color:rgba(246,241,231,.85);}
+  .mind__body p:last-child{margin-bottom:0;}
+  .mind__list{list-style:none;margin:0;padding:0;}
+  .mind__list li{padding:16px 0;border-top:1px solid var(--hair-light);font-size:1.02rem;color:rgba(246,241,231,.85);}
+  .mind__list li:first-child{border-top:0;}
+  .mind__list b{font-family:var(--display);font-style:italic;font-weight:500;color:var(--gold);font-size:1.15rem;display:block;margin-bottom:2px;}
+
+  /* ============== AFFILIATIONS ============== */
+  .affil__cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,2.6vw,32px);}
+  .affil{border:1px solid var(--hair);background:var(--paper);padding:clamp(28px,3vw,40px);display:flex;flex-direction:column;}
+  .affil__tag{border-top:2px solid var(--gold);padding-top:14px;margin-bottom:18px;display:inline-block;align-self:flex-start;}
+  .affil h3{font-size:clamp(1.6rem,2.7vw,2.1rem);margin-bottom:.4em;}
+  .affil p{color:var(--stone);margin:0 0 1em;}
+  .affil p:last-child{margin-bottom:0;}
+  .affil .name{color:var(--ink);font-weight:500;}
+
+  /* ============== ARIZONA ============== */
+  .az__grid{display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(34px,5vw,68px);align-items:start;}
+  .steps{list-style:none;margin:0;padding:0;}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,2.4vw,28px);padding:24px 0;border-top:1px solid var(--hair);}
+  .step:last-child{border-bottom:1px solid var(--hair);}
+  .step__num{font-family:var(--display);font-size:clamp(2.3rem,4.6vw,3.2rem);font-weight:500;line-height:.8;color:var(--gold);}
+  .step h3{font-size:1.3rem;margin-bottom:.35em;}
+  .step p{color:var(--stone);margin:0;font-size:.95rem;}
+
+  .refcard{background:var(--paper);border:1px solid var(--hair);position:relative;padding:clamp(26px,3vw,38px);}
+  .refcard::before{content:"";position:absolute;top:0;left:0;width:46px;height:46px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);}
+  .refcard .eyebrow{margin-bottom:20px;}
+  .refcard__title{font-size:1.55rem;margin-bottom:22px;}
+  .ref{margin:0;}
+  .ref > div{padding:13px 0;border-bottom:1px dotted var(--hair);}
+  .ref > div:last-child{border-bottom:0;}
+  .ref dt{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-deep);font-weight:500;margin-bottom:5px;}
+  .ref dd{margin:0;font-size:.93rem;line-height:1.55;color:var(--ink);}
+  .ref dd .cite{color:var(--stone);font-size:.8rem;}
+  .refnote{margin-top:22px;padding-top:18px;border-top:1px solid var(--hair);font-size:.8rem;color:var(--stone);line-height:1.6;}
+  .refnote a{color:var(--gold-deep);text-underline-offset:3px;}
+
+  /* ============== TEAM ============== */
+  .team__cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);}
+  .person{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,2.4vw,28px);align-items:start;padding:clamp(24px,2.6vw,32px);border:1px solid var(--hair);background:var(--paper);}
+  .person__mono{width:64px;height:64px;flex:none;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:1.5rem;position:relative;}
+  .person__mono::after{content:"";position:absolute;inset:-5px;border:1px solid var(--gold);border-radius:50%;opacity:.6;}
+  .person h3{font-size:1.5rem;margin-bottom:4px;}
+  .person .role{font-family:var(--body);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;color:var(--gold-deep);font-weight:500;margin-bottom:12px;}
+  .person p{color:var(--stone);margin:0;font-size:.95rem;}
+
+  /* ============== INQUIRE ============== */
+  .inquire__grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(34px,5vw,68px);align-items:start;}
+  .inquire__intro h2{font-size:clamp(2rem,4.4vw,3.1rem);margin-bottom:.4em;}
+  .inquire__intro p{color:var(--stone);max-width:38ch;}
+  .inquire__contact{margin-top:28px;font-size:.9rem;}
+  .inquire__contact a{color:var(--gold-deep);text-underline-offset:3px;font-weight:500;}
+  .inquire__contact .loc{display:block;margin-top:8px;text-transform:uppercase;letter-spacing:.2em;font-size:.7rem;color:var(--stone);}
+
+  .form{display:grid;gap:24px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{font-size:.66rem;text-transform:uppercase;letter-spacing:.18em;color:var(--gold-deep);font-weight:500;}
+  .field input,.field textarea{font-family:var(--body);font-size:1rem;color:var(--ink);border:0;border-bottom:1px solid var(--hair);background:transparent;padding:10px 2px;transition:border-color .3s;}
+  .field input:focus,.field textarea:focus{border-bottom-color:var(--gold-deep);outline:none;}
+  .field textarea{resize:vertical;min-height:96px;}
+  .form__row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+  .hp{position:absolute;left:-9999px;}
+  .form__submit{justify-self:start;}
+
+  /* ============== FOOTER ============== */
+  .footer{background:var(--ink);color:var(--cream);padding:clamp(54px,7vw,84px) 0 40px;}
+  .footer__top{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;align-items:flex-start;border-bottom:1px solid var(--hair-light);padding-bottom:36px;}
+  .footer__brand .b1{font-family:var(--body);text-transform:uppercase;letter-spacing:.22em;font-size:.62rem;color:var(--gold);}
+  .footer__brand .b2{font-family:var(--display);font-size:2.1rem;font-weight:600;margin-top:4px;}
+  .footer__brand .motto{color:var(--gold);font-style:italic;font-family:var(--display);font-size:1.05rem;margin-top:8px;letter-spacing:.03em;}
+  .footer__links{display:flex;gap:44px;flex-wrap:wrap;}
+  .footer__col h4{font-family:var(--body);font-size:.62rem;text-transform:uppercase;letter-spacing:.2em;color:var(--gold);margin:0 0 14px;font-weight:500;}
+  .footer__col a{display:block;text-decoration:none;color:rgba(246,241,231,.85);font-size:.9rem;margin-bottom:9px;transition:color .25s;}
+  .footer__col a:hover{color:var(--cream);}
+  .footer__fine{margin-top:30px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font-size:.72rem;color:rgba(246,241,231,.55);line-height:1.6;}
+  .footer__fine p{margin:0;max-width:72ch;}
+
+  /* ============== MOTION ============== */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ============== RESPONSIVE ============== */
+  @media (max-width:920px){
+    .nav__links{position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:0;background:var(--cream);border-bottom:1px solid var(--hair);max-height:0;overflow:hidden;transition:max-height .4s ease;}
+    .nav__links.open{max-height:460px;}
+    .nav__links li{width:100%;border-top:1px solid var(--hair-soft);}
+    .nav__links a{display:block;padding:16px var(--pad);}
+    .nav__links a::after{display:none;}
+    .nav__links .nav__cta{padding:16px var(--pad);}
+    .nav__toggle{display:block;}
+    .mission__grid,.academics__grid,.dev__grid,.mind__grid,.affil__cards,.az__grid,.team__cards,.inquire__grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:560px){
+    .form__row{grid-template-columns:1fr;}
+    .person{grid-template-columns:1fr;}
+    .masthead__sub{max-width:20ch;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body id="top">
+
+<!-- ============== NAV ============== -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brandmark" href="#top">
+      <span class="b1">The Collective</span><span class="dot">&middot;</span><span class="b2">Student</span>
+    </a>
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav__links" id="menu">
+      <li><a href="#mission">Mission</a></li>
+      <li><a href="#academics">Academics</a></li>
+      <li><a href="#development">Development</a></li>
+      <li><a href="#affiliations">Affiliations</a></li>
+      <li><a href="#team">Team</a></li>
+      <li class="nav__cta"><a class="btn btn--gold" href="#inquire">Inquire</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============== MASTHEAD ============== -->
+  <section class="masthead wrap">
+    <div class="masthead__frame">
+      <span>Elite Athlete Homeschool</span>
+      <span>Greater Phoenix &middot; Scottsdale</span>
+    </div>
+
+    <p class="eyebrow masthead__eyebrow">The Collective</p>
+    <h1 class="masthead__title">Stud<span class="accent">e</span>nt<span class="sr-only"> — The Collective Student, Elite Athlete Homeschool Academy in Arizona</span></h1>
+    <p class="masthead__sub">Homeschool education for elite athletes — academic rigor that flexes around training, travel, and competition.</p>
+    <p class="masthead__meta">Academics by <b>Acellus Power Homeschool</b> &middot; In affiliation with <b>Prodos Futbol Academy</b></p>
+
+    <div class="masthead__cta">
+      <a class="btn" href="#inquire">Inquire about enrollment</a>
+      <a class="btn btn--ghost" href="#mission">Explore the program</a>
+    </div>
+    <p class="masthead__motto">Compete. Learn. Lead.</p>
+  </section>
+
+  <!-- ============== MISSION ============== -->
+  <section class="mission" id="mission">
+    <div class="wrap section">
+      <p class="eyebrow">Our mission</p>
+      <p class="mission__lead">To give elite athletes a real education — without asking them to choose between the <em>classroom</em> and the <em>arena</em>.</p>
+      <div class="mission__grid">
+        <p><strong>Academics that hold up.</strong> We protect academic rigor while making genuine room for the schedule an elite competitor actually lives — early training, travel, recovery, and competition. The work stays serious; the structure bends.</p>
+        <p><strong>People who lead.</strong> Beyond coursework, we build future leaders: entrepreneurship, public speaking, online branding and marketing, financial literacy, and sustainable living — alongside the interpersonal communication and social-emotional health it takes to meet the intense mental challenges of high-level sport.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ACADEMICS ============== -->
+  <section class="academics" id="academics">
+    <div class="wrap section">
+      <div class="shead reveal">
+        <p class="eyebrow">Academics</p>
+        <h2>Core curriculum, powered by Acellus.</h2>
+        <p>The academic foundation is delivered through Acellus Power Homeschool — so coursework travels with the athlete and never competes with a tournament for time.</p>
+      </div>
+
+      <div class="academics__grid">
+        <div class="academics__panel reveal">
+          <p class="eyebrow">Acellus Power Homeschool</p>
+          <h3>Self-paced. Video-based. PreK&ndash;12.</h3>
+          <p>Hundreds of professionally filmed, self-paced courses across core subjects, with technology that adapts to each student and closes learning gaps as they appear.</p>
+          <p>Progress and attendance are tracked automatically and exported as clean records — exactly what families need to stay organized and athletes need to stay eligible.</p>
+        </div>
+
+        <ul class="feat reveal">
+          <li><span class="feat__k">Flexible</span><div><h4>Built around the calendar that already exists</h4><p>Lessons fit between training blocks, travel days, and competition — learning happens when the day allows it.</p></div></li>
+          <li><span class="feat__k">Mastery</span><div><h4>Move at the right pace</h4><p>Race ahead where it's easy, slow down where it's hard. Concept mastery sets the tempo, not a bell schedule.</p></div></li>
+          <li><span class="feat__k">Records</span><div><h4>Transcripts and reports, on demand</h4><p>Automated grades, hours, and attendance keep documentation ready for eligibility, transfers, and college applications.</p></div></li>
+          <li><span class="feat__k">Guided</span><div><h4>A real educator alongside the platform</h4><p>Our team helps plan the year, choose courses, and keep each athlete on track — the structure around the software.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== DEVELOPMENT ============== -->
+  <section class="development" id="development">
+    <div class="wrap section">
+      <div class="shead reveal">
+        <p class="eyebrow">Beyond the coursework</p>
+        <h2>The skills that outlast the sport.</h2>
+        <p>Every athlete eventually competes at something else. We develop the capabilities that carry into business, leadership, and life.</p>
+      </div>
+
+      <div class="dev__grid reveal">
+        <article class="dev"><span class="dev__num">i.</span><h3>Entrepreneurship</h3><p>Thinking like a builder — spotting opportunity, taking initiative, and turning ideas into something real.</p></article>
+        <article class="dev"><span class="dev__num">ii.</span><h3>Public Speaking</h3><p>Presence and clarity on camera, on stage, and in the room — communicating with confidence under pressure.</p></article>
+        <article class="dev"><span class="dev__num">iii.</span><h3>Branding &amp; Marketing</h3><p>Building a personal brand online with intention, integrity, and an understanding of how audiences are earned.</p></article>
+        <article class="dev"><span class="dev__num">iv.</span><h3>Financial Literacy</h3><p>Understanding money early — earning, saving, investing, and managing the realities that come with opportunity.</p></article>
+        <article class="dev"><span class="dev__num">v.</span><h3>Sustainable Living</h3><p>Habits and choices that hold up over a career and a lifetime — for the body, the schedule, and the planet.</p></article>
+        <article class="dev"><span class="dev__num">vi.</span><h3>Communication &amp; Connection</h3><p>Interpersonal skill and emotional fluency — listening, collaborating, and leading teammates well.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MIND ============== -->
+  <section class="mind">
+    <div class="wrap section">
+      <div class="mind__grid">
+        <div class="mind__body reveal">
+          <p class="eyebrow">Mental &amp; social-emotional performance</p>
+          <h2>Built for the <em>mind</em>, too.</h2>
+          <p>Competing at a high level is a mental discipline as much as a physical one. We treat it that way — giving athletes language, tools, and support for the pressure that comes with the pursuit.</p>
+          <p>This is woven through everything, and reinforced on the field through our mental-performance work with Prodos Futbol Academy.</p>
+        </div>
+        <ul class="mind__list reveal">
+          <li><b>Pressure &amp; performance</b>Tools to manage nerves, refocus after mistakes, and perform when it counts.</li>
+          <li><b>Identity beyond results</b>A sense of self that isn't tied to the last win, loss, or ranking.</li>
+          <li><b>Resilience &amp; recovery</b>Healthy ways to handle setbacks, injury, and the long arc of a career.</li>
+          <li><b>Connection</b>Real relationships and honest conversation as the antidote to the isolation of elite sport.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== AFFILIATIONS ============== -->
+  <section class="affiliations" id="affiliations">
+    <div class="wrap section">
+      <div class="shead reveal">
+        <p class="eyebrow">Affiliations &amp; partners</p>
+        <h2>Surrounded by the right people.</h2>
+        <p>Our athletes train and learn alongside partners who set a high standard on the field and in the classroom.</p>
+      </div>
+
+      <div class="affil__cards reveal">
+        <article class="affil">
+          <span class="affil__tag eyebrow">On the field</span>
+          <h3>Prodos Futbol Academy</h3>
+          <p>Our student-athletes attend and train at Prodos Futbol Academy in both tactical and mental performance — developing the game and the mindset that the game demands.</p>
+          <p>The academy is led by <span class="name">Robbie Findley</span>, a Phoenix native and former U.S. Men's National Team player who represented the United States at the 2010 FIFA World Cup.</p>
+        </article>
+        <article class="affil">
+          <span class="affil__tag eyebrow">In the classroom</span>
+          <h3>Acellus Power Homeschool</h3>
+          <p>Core academics are delivered through Acellus Power Homeschool — self-paced, video-based PreK&ndash;12 courses with adaptive instruction and automated record-keeping.</p>
+          <p>It's the academic engine that makes a rigorous, flexible school day possible around a serious training schedule.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ARIZONA ============== -->
+  <section class="arizona" id="arizona">
+    <div class="wrap section">
+      <div class="shead reveal">
+        <p class="eyebrow">Homeschooling in Arizona</p>
+        <h2>How to begin — clearly, and by the book.</h2>
+        <p>Arizona is one of the most homeschool-friendly states in the country. Here is the path, with the legal essentials in plain language. We help every family choose and file the right way.</p>
+      </div>
+
+      <div class="az__grid">
+        <ol class="steps reveal">
+          <li class="step"><span class="step__num">01</span><div><h3>Talk with us &amp; plan</h3><p>We map the academic year, set up Acellus courses, and align school around training, travel, and competition.</p></div></li>
+          <li class="step"><span class="step__num">02</span><div><h3>File your Affidavit of Intent</h3><p>For children ages 6&ndash;16, file a notarized Affidavit of Intent to Homeschool with your County School Superintendent within 30 days of starting, with a certified copy of the birth certificate.</p></div></li>
+          <li class="step"><span class="step__num">03</span><div><h3>Build the full program</h3><p>Cover the five required subjects through Acellus, then layer in athletics, leadership, and mental-performance development.</p></div></li>
+          <li class="step"><span class="step__num">04</span><div><h3>Begin &amp; keep records</h3><p>Start instruction with automated progress, attendance, and transcripts — so eligibility and applications are always handled.</p></div></li>
+        </ol>
+
+        <aside class="refcard reveal" aria-label="Arizona homeschool quick reference">
+          <p class="eyebrow">Quick reference</p>
+          <h3 class="refcard__title">The Arizona essentials</h3>
+          <dl class="ref">
+            <div><dt>Who files</dt><dd>Children ages 6&ndash;16. <span class="cite">A.R.S. §15&#8209;802</span></dd></div>
+            <div><dt>When</dt><dd>Within 30 days of beginning home instruction (or of the child's 6th birthday).</dd></div>
+            <div><dt>Where</dt><dd>Your County School Superintendent — Maricopa County for most of Greater Phoenix.</dd></div>
+            <div><dt>What to include</dt><dd>A notarized Affidavit of Intent plus a certified copy of the birth certificate or other reliable proof. <span class="cite">A.R.S. §15&#8209;828</span></dd></div>
+            <div><dt>Required subjects</dt><dd>Reading, grammar, mathematics, social studies, science.</dd></div>
+            <div><dt>One-time filing</dt><dd>File once unless homeschooling stops and restarts; notify the county within 30 days of stopping.</dd></div>
+            <div><dt>Choosing the path</dt><dd>The right enrollment route can differ by program — we help you confirm whether the homeschool affidavit or another pathway fits your family.</dd></div>
+          </dl>
+          <p class="refnote">Requirements can change — confirm current details with your <a href="https://schoolsup.org/homeschool" target="_blank" rel="noopener">County School Superintendent</a> and the <a href="https://www.azed.gov/" target="_blank" rel="noopener">Arizona Department of Education</a> before filing. This page is general information, not legal advice.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== TEAM ============== -->
+  <section class="team" id="team">
+    <div class="wrap section">
+      <div class="shead reveal">
+        <p class="eyebrow">Leadership</p>
+        <h2>Who runs the school.</h2>
+      </div>
+
+      <div class="team__cards reveal">
+        <article class="person">
+          <div class="person__mono" aria-hidden="true">TC</div>
+          <div>
+            <h3>Tarah Cook</h3>
+            <p class="role">School Administrator &amp; Head Educator</p>
+            <p>Leads the academy's direction and day-to-day education — building each athlete's program, keeping academics rigorous, and developing the leadership skills that carry beyond sport.</p>
+          </div>
+        </article>
+        <article class="person">
+          <div class="person__mono" aria-hidden="true">AM</div>
+          <div>
+            <h3>Amanda Massey</h3>
+            <p class="role">School Compliance &amp; Educational Support</p>
+            <p>Keeps families compliant and supported — affidavits, records, and eligibility handled correctly, so every athlete's paperwork is as solid as their training.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== INQUIRE ============== -->
+  <section class="inquire" id="inquire">
+    <div class="wrap section">
+      <div class="inquire__grid">
+        <div class="inquire__intro reveal">
+          <p class="eyebrow">Begin</p>
+          <h2>Let's build the athlete's year.</h2>
+          <p>Tell us about your athlete and where you are in the process. We'll follow up with the right next step.</p>
+          <div class="inquire__contact">
+            <a href="mailto:Info@TheCollectiveAve.com">Info@TheCollectiveAve.com</a>
+            <span class="loc">Greater Phoenix &middot; Scottsdale, Arizona</span>
+          </div>
+        </div>
+
+        <!-- To go live: set the form action to your Formspree endpoint
+             (e.g. https://formspree.io/f/XXXXXXX), or add the `netlify`
+             attribute if hosting on Netlify Forms. -->
+        <form class="form reveal" action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form__row">
+            <div class="field"><label for="name">Parent / guardian name</label><input type="text" id="name" name="name" autocomplete="name" required /></div>
+            <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label for="athlete">Athlete &amp; age</label><input type="text" id="athlete" name="athlete" placeholder="e.g. 14, soccer" /></div>
+            <div class="field"><label for="sport">Sport &amp; level</label><input type="text" id="sport" name="sport" placeholder="Club, academy, national" /></div>
+          </div>
+          <div class="field"><label for="message">What you're hoping for</label><textarea id="message" name="message" rows="4"></textarea></div>
+          <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn btn--gold form__submit" type="submit">Send inquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============== FOOTER ============== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <p class="b1">The Collective Student</p>
+        <p class="b2">Elite Athlete Academy</p>
+        <p class="motto">Compete. Learn. Lead.</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <div class="footer__col">
+          <h4>The School</h4>
+          <a href="#mission">Mission</a>
+          <a href="#academics">Academics</a>
+          <a href="#development">Development</a>
+          <a href="#team">Leadership</a>
+          <a href="#inquire">Inquire</a>
+        </div>
+        <div class="footer__col">
+          <h4>Partners &amp; resources</h4>
+          <a href="https://www.powerhomeschool.org/" target="_blank" rel="noopener">Acellus Power Homeschool</a>
+          <a href="https://schoolsup.org/homeschool" target="_blank" rel="noopener">Maricopa County Superintendent</a>
+          <a href="https://www.azed.gov/" target="_blank" rel="noopener">Arizona Dept. of Education</a>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <a href="mailto:Info@TheCollectiveAve.com">Info@TheCollectiveAve.com</a>
+          <a href="#top">Greater Phoenix, Arizona</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer__fine">
+      <p>The information on this site is provided for general guidance and is not legal advice. Arizona homeschool requirements can change — verify current rules with your County School Superintendent and the Arizona Department of Education before filing. Acellus&reg; and Power Homeschool are trademarks of their respective owners; The Collective Student is an independent academy.</p>
+      <p>&copy; 2026 The Collective Ave</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var toggle=document.querySelector('.nav__toggle');
+    var menu=document.getElementById('menu');
+    if(toggle&&menu){
+      toggle.addEventListener('click',function(){
+        var open=menu.classList.toggle('open');
+        toggle.setAttribute('aria-expanded',open?'true':'false');
+      });
+      menu.addEventListener('click',function(e){
+        if(e.target.tagName==='A'){menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+      });
+    }
+  })();
+  (function(){
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els=document.querySelectorAll('.reveal');
+    if(reduce||!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:0.14});
+    els.forEach(function(el){io.observe(el);});
+  })();
+</script>
+
+</body>
+</html>
