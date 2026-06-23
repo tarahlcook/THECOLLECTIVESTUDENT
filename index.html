@@ -8,15 +8,25 @@
 <meta name="theme-color" content="#1A1714" />
 <link rel="canonical" href="https://thecollectiveave.com/" />
 
+<!-- Icons -->
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
 <!-- Open Graph / social -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="The Collective Student — Elite Athlete Homeschool Academy" />
 <meta property="og:description" content="Homeschooling built for elite competitors: academic rigor that flexes around training, travel, and competition — plus leadership and mental-performance development." />
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="https://thecollectiveave.com/" />
+<meta property="og:image" content="https://thecollectiveave.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The Collective Student Academy crest" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="The Collective Student — Elite Athlete Homeschool Academy" />
 <meta name="twitter:description" content="Academic rigor for elite athletes, balanced with training and competition. Greater Phoenix, Arizona." />
+<meta name="twitter:image" content="https://thecollectiveave.com/og-image.png" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,6 +41,8 @@
   "name": "The Collective Student",
   "alternateName": "The Collective Student — Elite Athlete Academy",
   "description": "A homeschool academy for elite-level athletes in Arizona. Academic curriculum delivered through Acellus Power Homeschool, with leadership, entrepreneurship, financial literacy, and mental-performance development.",
+  "logo": "https://thecollectiveave.com/logo.png",
+  "image": "https://thecollectiveave.com/og-image.png",
   "areaServed": [
     { "@type": "State", "name": "Arizona" },
     { "@type": "City", "name": "Phoenix" },
@@ -40,8 +52,8 @@
   "email": "Info@TheCollectiveAve.com",
   "parentOrganization": { "@type": "Organization", "name": "The Collective Ave" },
   "employee": [
-    { "@type": "Person", "name": "Tarah Cook", "jobTitle": "School Administrator & Head Educator" },
-    { "@type": "Person", "name": "Amanda Massey", "jobTitle": "School Compliance & Educational Support" }
+    { "@type": "Person", "name": "Tarah Cook", "jobTitle": "Head Educator & Operational Compliance" },
+    { "@type": "Person", "name": "Amanda Massey", "jobTitle": "Head School Master & Administrative Compliance" }
   ],
   "affiliation": [
     { "@type": "Organization", "name": "Prodos Futbol Academy" },
@@ -107,7 +119,8 @@
   /* ============== NAV ============== */
   .nav{position:sticky;top:0;z-index:50;background:rgba(246,241,231,.82);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--hair);}
   .nav__inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;}
-  .brandmark{display:flex;align-items:baseline;gap:.5ch;text-decoration:none;}
+  .brandmark{display:flex;align-items:center;gap:11px;text-decoration:none;}
+  .brandmark__logo{height:42px;width:auto;display:block;}
   .brandmark .b1{font-family:var(--body);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;font-weight:500;color:var(--stone);}
   .brandmark .dot{color:var(--gold);}
   .brandmark .b2{font-family:var(--display);font-size:1.3rem;font-weight:600;}
@@ -119,7 +132,8 @@
   .nav__toggle span{display:block;width:24px;height:1.5px;background:var(--ink);margin:5px 0;}
 
   /* ============== MASTHEAD ============== */
-  .masthead{padding-top:clamp(48px,7vw,92px);padding-bottom:clamp(56px,8vw,104px);text-align:center;}
+  .masthead{padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(56px,8vw,104px);text-align:center;}
+  .masthead__logo{width:clamp(120px,16vw,176px);height:auto;display:block;margin:0 auto clamp(20px,3vw,32px);}
   .masthead__frame{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;}
   .masthead__frame span{font-family:var(--body);text-transform:uppercase;letter-spacing:.24em;font-size:.66rem;color:var(--stone);}
   .masthead__eyebrow{margin:clamp(40px,6vw,72px) 0 8px;}
@@ -213,6 +227,19 @@
   .refnote a{color:var(--gold-deep);text-underline-offset:3px;}
 
   /* ============== TEAM ============== */
+  .team__photo{margin:0 0 clamp(36px,5vw,56px);}
+  .team__photo figure{margin:0;}
+  .team__frame{position:relative;border:1px solid var(--hair);background:var(--paper);padding:10px;}
+  .team__frame::before{content:"";position:absolute;top:-1px;left:-1px;width:46px;height:46px;border-top:2px solid var(--gold);border-left:2px solid var(--gold);}
+  .team__frame::after{content:"";position:absolute;bottom:-1px;right:-1px;width:46px;height:46px;border-bottom:2px solid var(--gold);border-right:2px solid var(--gold);}
+  .team__img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#ECE6D8;}
+  /* graceful placeholder shown until the real photo is added */
+  .team__placeholder{display:grid;place-items:center;text-align:center;aspect-ratio:16/9;background:
+     repeating-linear-gradient(45deg, #efe9db 0 18px, #ece6d8 18px 36px);color:var(--stone);padding:24px;}
+  .team__placeholder .ph-eyebrow{font-family:var(--body);text-transform:uppercase;letter-spacing:.22em;font-size:.66rem;color:var(--gold-deep);font-weight:500;margin-bottom:10px;}
+  .team__placeholder .ph-title{font-family:var(--display);font-size:clamp(1.3rem,3vw,1.9rem);color:var(--ink);max-width:30ch;}
+  .team__placeholder code{font-family:ui-monospace,Menlo,Consolas,monospace;background:rgba(26,23,20,.07);padding:2px 7px;border-radius:3px;font-size:.85em;}
+  .team__caption{margin:14px 2px 0;font-family:var(--body);text-transform:uppercase;letter-spacing:.16em;font-size:.68rem;color:var(--stone);}
   .team__cards{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,3vw,40px);}
   .person{display:grid;grid-template-columns:auto 1fr;gap:clamp(18px,2.4vw,28px);align-items:start;padding:clamp(24px,2.6vw,32px);border:1px solid var(--hair);background:var(--paper);}
   .person__mono{width:64px;height:64px;flex:none;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:600;font-size:1.5rem;position:relative;}
@@ -271,6 +298,7 @@
     .form__row{grid-template-columns:1fr;}
     .person{grid-template-columns:1fr;}
     .masthead__sub{max-width:20ch;}
+    .brandmark .b1{display:none;}
   }
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto;}
@@ -284,7 +312,8 @@
 <!-- ============== NAV ============== -->
 <header class="nav">
   <div class="wrap nav__inner">
-    <a class="brandmark" href="#top">
+    <a class="brandmark" href="#top" aria-label="The Collective Student Academy — home">
+      <img class="brandmark__logo" src="logo-mark.png" alt="The Collective Student Academy crest" />
       <span class="b1">The Collective</span><span class="dot">&middot;</span><span class="b2">Student</span>
     </a>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu">
@@ -305,6 +334,7 @@
 
   <!-- ============== MASTHEAD ============== -->
   <section class="masthead wrap">
+    <img class="masthead__logo" src="logo-mark.png" alt="The Collective Student Academy crest — Rise. Lead. Impact." />
     <div class="masthead__frame">
       <span>Elite Athlete Homeschool</span>
       <span>Greater Phoenix &middot; Scottsdale</span>
@@ -319,7 +349,7 @@
       <a class="btn" href="#inquire">Inquire about enrollment</a>
       <a class="btn btn--ghost" href="#mission">Explore the program</a>
     </div>
-    <p class="masthead__motto">Compete. Learn. Lead.</p>
+    <p class="masthead__motto">Rise. Lead. Impact.</p>
   </section>
 
   <!-- ============== MISSION ============== -->
@@ -470,12 +500,29 @@
         <h2>Who runs the school.</h2>
       </div>
 
+      <div class="team__photo reveal">
+        <figure>
+          <div class="team__frame">
+            <img class="team__img" src="team-photo.jpg" alt="Tarah Cook and Amanda Massey with The Collective Student athletes in their soccer, basketball, and allstar cheer uniforms"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='grid';" />
+            <div class="team__placeholder" style="display:none;">
+              <div>
+                <p class="ph-eyebrow">Team photo</p>
+                <p class="ph-title">Add your photo of Tarah &amp; Amanda with the athletes — in their soccer, basketball &amp; allstar cheer uniforms.</p>
+                <p style="margin-top:14px;font-size:.85rem;">Upload it to the repo as <code>team-photo.jpg</code> (landscape, ~1600&times;900).</p>
+              </div>
+            </div>
+          </div>
+          <figcaption class="team__caption">Tarah Cook &amp; Amanda Massey with our student-athletes</figcaption>
+        </figure>
+      </div>
+
       <div class="team__cards reveal">
         <article class="person">
           <div class="person__mono" aria-hidden="true">TC</div>
           <div>
             <h3>Tarah Cook</h3>
-            <p class="role">School Administrator &amp; Head Educator</p>
+            <p class="role">Head Educator &amp; Operational Compliance</p>
             <p>Leads the academy's direction and day-to-day education — building each athlete's program, keeping academics rigorous, and developing the leadership skills that carry beyond sport.</p>
           </div>
         </article>
@@ -483,7 +530,7 @@
           <div class="person__mono" aria-hidden="true">AM</div>
           <div>
             <h3>Amanda Massey</h3>
-            <p class="role">School Compliance &amp; Educational Support</p>
+            <p class="role">Head School Master &amp; Administrative Compliance</p>
             <p>Keeps families compliant and supported — affidavits, records, and eligibility handled correctly, so every athlete's paperwork is as solid as their training.</p>
           </div>
         </article>
@@ -534,7 +581,7 @@
       <div class="footer__brand">
         <p class="b1">The Collective Student</p>
         <p class="b2">Elite Athlete Academy</p>
-        <p class="motto">Compete. Learn. Lead.</p>
+        <p class="motto">Rise. Lead. Impact.</p>
       </div>
       <nav class="footer__links" aria-label="Footer">
         <div class="footer__col">
